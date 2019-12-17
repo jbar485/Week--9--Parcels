@@ -25,6 +25,9 @@ end
 
 post('/parcels') do
   name = params[:parcel_name]
+  height = params[:parcel_height]
+  width = params[:parcel_width]
+  weight = params[:parcel_weight]
   parcel = Parcel.new(name, height, width, weight, nil)
   parcel.save()
   @parcels = Parcel.all()
